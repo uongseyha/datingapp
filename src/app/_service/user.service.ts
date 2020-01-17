@@ -33,4 +33,8 @@ export class UserService {
   getProduct(): Observable<Product[]>{
     return this.http.get<Product[]>(this.baseUrl + 'product');
   }
+
+  updateUser(id:number,user:User){
+    return this.http.put(this.baseUrl + 'user/' + id,user);
+  }
 }
