@@ -10,6 +10,8 @@ import { catchError } from 'rxjs/operators';
 @Injectable()
 export class MemberEditResolver implements Resolve<User>{
 
+    
+
     constructor(
         private userService: UserService,
         private alertifyService:AlertifyService,
