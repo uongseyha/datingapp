@@ -32,6 +32,7 @@ import { MemberCardComponent } from './members/member-card/member-card.component
 import { JwtModule } from '@auth0/angular-jwt';
 import { PreventUnsavedChangeGuard } from './_guards/prevent-unsaved-change.guard';
 import { ErrorInterceptorProvider } from './_service/error.interceptor';
+import { ListsResolver } from './_resolver/lists.resolver';
 
 
 export function tokenGetter(){
@@ -90,6 +91,7 @@ export class CustomHammerConfig extends HammerGestureConfig  {
       MemberDetailResolver,
       MemberListResolver,
       MemberEditResolver,
+      ListsResolver,
       PreventUnsavedChangeGuard,
       ErrorInterceptorProvider,
       { provide: HAMMER_GESTURE_CONFIG, useClass: CustomHammerConfig }
