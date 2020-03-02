@@ -1,3 +1,5 @@
+import { MemberMessagesComponent } from './members/member-messages/member-messages.component';
+import { MessagesResolver } from './_resolver/messages.resolver';
 import { PhotoEditComponent } from './members/photo-edit/photo-edit.component';
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
 import { MemberEditResolver } from './_resolver/member-edit.resolver';
@@ -27,12 +29,12 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { ListsComponent } from './lists/lists.component';
 import { MemberListsComponent } from './members/member-lists/member-lists.component';
-import { MessagesComponent } from './messages/messages.component';
 import { MemberCardComponent } from './members/member-card/member-card.component';
 import { JwtModule } from '@auth0/angular-jwt';
 import { PreventUnsavedChangeGuard } from './_guards/prevent-unsaved-change.guard';
 import { ErrorInterceptorProvider } from './_service/error.interceptor';
 import { ListsResolver } from './_resolver/lists.resolver';
+import { MessagesComponent } from './messages/messages.component';
 
 
 export function tokenGetter(){
@@ -59,7 +61,8 @@ export class CustomHammerConfig extends HammerGestureConfig  {
       MemberDetailComponent,
       MemberEditComponent,
       PhotoEditComponent,
-      TimeAgoPipe
+      TimeAgoPipe,
+      MemberMessagesComponent
    ],
    imports: [
       BrowserModule,
@@ -92,6 +95,7 @@ export class CustomHammerConfig extends HammerGestureConfig  {
       MemberListResolver,
       MemberEditResolver,
       ListsResolver,
+      MessagesResolver,
       PreventUnsavedChangeGuard,
       ErrorInterceptorProvider,
       { provide: HAMMER_GESTURE_CONFIG, useClass: CustomHammerConfig }
